@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizzaria Queijuda</title>
+</head>
+<body>
+	<!-- daqui pra baixo governa sobre o icone e o menu de navegação-->
+	<table border="0" width="70%" align="center">
+	<tr>
+		<td>
+			<a href="index.html"><img src="images/queijuda.png" width="40%"></a>
+		</td>
+		<td>
+			<a href="historia.html">Pizzaria Queijuda</a>
+			<a href="premios.html">Prêmios</a>
+			<a href="contato.html">Contato</a>
+			<a href="cardapio.html">Cardápio</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="images/pizza_row.jpg" width="100%">
+		</td>
+	</tr>
+    </table>
+    
+    <hr>
+    <!-- Contato, horario de atendimento, endereço, fale conosco, dados do cliente, -->
+    <h1 align="center"><b>Contato</b></h1>
+    <br>
+    <br>
+    <h3 align="center"><b>Terça a Quinta</b></h3>
+    <h3 align="center">12h às 20h</h3>
+    <br>
+    <br>
+    <h3 align="center"><b>Sexta</b></h3>
+    <h3 align="center">10h às 23h</h3>
+    <br>
+    <br>
+    <h3 align="center"><b>Endereço</b></h3>
+    <h3 align="center">Rua Voluntários da Pátria, Nº 420, Nossa Senhora, Rio de Janeiro</h3>
+    <br>
+    <br>
+    <h3 align="center"><b>Fale conosco</b></h3>
+    <h3 align="center"><b>Dados do Cliente</b></h3>
+    
+    <!--Essa parte eu peguei no google, não tá funcionando-->
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+
+    <script>
+    function myMap() {
+    var mapProp= {
+    center:new google.maps.LatLng(-21.192894, -41.906418),
+    zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <!--aqui termina o google maps-->
+
+    <hr>
+    <!-- precisa arrumar pra colocar lado a lado-->
+    <table align="center" border="0" width="80%">            
+        <tr>
+            <td>
+                <form>
+                    <label for="fname">Nome Completo:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <label for="email">Insira seu email:</label><br>
+                        <input type="text" id="email" name="email"><br>
+                </form>
+            </td>
+            <br>
+            <br>
+            <td>
+                <form>
+                    <select>
+                        <option value="rio de janeiro">RJ</option>
+                        <option value="minas gerais">MG</option>
+                        <option value="sao paulo">SP</option>
+                        <option value="espirito santo">ES</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+
+        <!-- pesquisa de satisfação-->
+        <tr>
+            <td>
+                <div class="control">
+                    <label for="satisfeito">Satisfeito?:</label>
+                    <label>
+                        <input type="radio" name="rating">
+                            1
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" >
+                            2
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" >
+                            3
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" >
+                            4
+                    </label>
+                    <label>
+                        <input type="radio" name="rating">
+                            5
+                    </label>
+                  </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p>Quais pizzas você mais gostou?:</p>
+
+                <div>
+                <input type="checkbox" id="pepperoni" name="pepperoni">
+                <label for="pepperoni">pepperoni</label>
+                </div>
+
+                <div>
+                <input type="checkbox" id="barbecue" name="barbecue">
+                <label for="barbecue">barbecue</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="multi" name="multi">
+                    <label for="multi">multi-queijos</label>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="story">Tell us your story:</label>
+                <textarea id="story" name="story" rows="4" cols="50"></textarea>
+                <input type="submit">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    
+    <hr>
+    <!-- daqui pra baixo governa sobre o rodapé-->
+	<table align="center" border="0" width="80%">	
+		<tr>
+			<th>Horários</th>
+			<th>Local</th>
+			<th>Contato</th>
+		</tr>
+		<tr align="center">
+			<td>
+			<ul style="list-style: none";>
+				<li>Terça e quinta</li>
+				<li>12h às 20h</li>
+				<li>Sexta</li>
+				<li>10h às 23h</li>
+			</ul>
+			</td>
+
+			<td>
+			<ul style="list-style: none";>
+				<li>Rua Voluntários da Pátria</li>
+				<li>Nº 420</li>
+				<li>Nossa Senhora</li>
+				<li>Rio de Janeiro</li>
+			</ul>
+			</td>
+
+			<td>
+			<ul style="list-style: none";>
+				<li>Pedidos: </li>
+				<li>22 996664206</li>
+				<li>queijudapizzaria@gmail.com</li>
+			</ul>
+			</td>
+		</tr>
+	</table>
+    <br>
+    <br>
+</body>
+</html>
