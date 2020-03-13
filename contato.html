@@ -38,14 +38,14 @@
     <br>
     <br>
     <h3 align="center"><b>Endereço</b></h3>
-    <h3 align="center">Rua Voluntários da Pátria, Nº 420, Nossa Senhora, Rio de Janeiro</h3>
+    <a href="https://www.google.com.br/maps/place/UniRedentor/@-21.193821,-41.9084647,17z/data=!4m12!1m6!3m5!1s0xbc6015fbfc23c7:0xcfc10aca2c3500cc!2sUniRedentor!8m2!3d-21.193826!4d-41.906276!3m4!1s0xbc6015fbfc23c7:0xcfc10aca2c3500cc!8m2!3d-21.193826!4d-41.906276" target="_blank" ><h3 align="center">Avenida Deputado Carlos Pinto Filho, 69, Presidente Costa e Silva - Itaperuna - Rio de Janeiro</h3></a>
     <br>
     <br>
     <h3 align="center"><b>Fale conosco</b></h3>
     <h3 align="center"><b>Dados do Cliente</b></h3>
     
-    <!--Essa parte eu peguei no google, não tá funcionando-->
-    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <!--Essa parte eu peguei no google, não tá funcionando
+    <div id="googleMap" style="width:100%;height:400px;"></div> 
 
     <script>
     function myMap() {
@@ -58,96 +58,101 @@
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-    <!--aqui termina o google maps-->
+    aqui termina o google maps-->
 
     <hr>
     <!-- precisa arrumar pra colocar lado a lado-->
-    <table align="center" border="0" width="80%">            
-        <tr>
-            <td>
-                <form>
-                    <label for="fname">Nome Completo:</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                </form>
-            </td>
-            <td>
-                <form>
-                    <label for="email">Insira seu email:</label><br>
-                        <input type="text" id="email" name="email"><br>
-                </form>
-            </td>
+    <div>
+        <table align="center" border="0" width="80%">            
+            <tr>
+                <td width="20%">
+                    <form>
+                        <label for="fname">Nome Completo:</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                    </form>
+                </td>
+                <td width="50%">
+                    <form>
+                        <label for="email">Insira seu email:</label><br>
+                            <input type="text" id="email" name="email"><br>
+                    </form>
+                </td>
+                <br>
+                <br>
+                <td width="30%">
+                    <form>
+                        <select>
+                            <option value="rio de janeiro">RJ</option>
+                            <option value="minas gerais">MG</option>
+                            <option value="sao paulo">SP</option>
+                            <option value="espirito santo">ES</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
             <br>
             <br>
-            <td>
-                <form>
-                    <select>
-                        <option value="rio de janeiro">RJ</option>
-                        <option value="minas gerais">MG</option>
-                        <option value="sao paulo">SP</option>
-                        <option value="espirito santo">ES</option>
-                    </select>
-                </form>
-            </td>
-        </tr>
+            <!-- pesquisa de satisfação-->
+            <tr>
+                <td>
+                    <div class="control">
+                        <label for="satisfeito">Satisfeito?:</label>
+                        <label>
+                            <input type="radio" name="rating">
+                                1
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" >
+                                2
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" >
+                                3
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" >
+                                4
+                        </label>
+                        <label>
+                            <input type="radio" name="rating">
+                                5
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <td>
+                    <p>Quais pizzas você mais gostou?:</p>
 
-        <!-- pesquisa de satisfação-->
-        <tr>
-            <td>
-                <div class="control">
-                    <label for="satisfeito">Satisfeito?:</label>
-                    <label>
-                        <input type="radio" name="rating">
-                            1
-                    </label>
-                    <label>
-                        <input type="radio" name="rating" >
-                            2
-                    </label>
-                    <label>
-                        <input type="radio" name="rating" >
-                            3
-                    </label>
-                    <label>
-                        <input type="radio" name="rating" >
-                            4
-                    </label>
-                    <label>
-                        <input type="radio" name="rating">
-                            5
-                    </label>
-                  </div>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                <p>Quais pizzas você mais gostou?:</p>
+                    <div>
+                        <input type="checkbox" id="pepperoni" name="pepperoni">
+                        <label for="pepperoni">pepperoni</label>
+                    </div>
 
-                <div>
-                <input type="checkbox" id="pepperoni" name="pepperoni">
-                <label for="pepperoni">pepperoni</label>
-                </div>
+                    <div>
+                        <input type="checkbox" id="barbecue" name="barbecue">
+                        <label for="barbecue">barbecue</label>
+                    </div>
 
-                <div>
-                <input type="checkbox" id="barbecue" name="barbecue">
-                <label for="barbecue">barbecue</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="multi" name="multi">
-                    <label for="multi">multi-queijos</label>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <label for="story">Tell us your story:</label>
-                <textarea id="story" name="story" rows="4" cols="50"></textarea>
-                <input type="submit">
-            </td>
-        </tr>
-    </table>
+                    <div>
+                        <input type="checkbox" id="multi" name="multi">
+                        <label for="multi">multi-queijos</label>
+                    </div>
+                </td>
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <td>
+                    <label for="story">Deixe um comentário sobre o que você gostou:</label>
+                    <textarea id="story" name="story" rows="4" cols="50"></textarea>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </div>
     <br>
     <br>
     
